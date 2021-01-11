@@ -1,18 +1,24 @@
 const life = () => {
   const foo = (x) => {
     var y = x * 2;
-    return (baz = (z) => {
+    return (bar = (z) => {
       if (z.length > 3) {
-        return z.map((v) => {
-          if (v > 3) return v + y;
-          else return baz(v * 4);
-        });
+        return z.map(
+          (baz = (v) => {
+            if (v > 3) return v + y;
+            else return baz(v * 4);
+          })
+        );
       } else {
         var obj = [];
-        setTimeout(() => {
-          obj.length = 1;
-          obj[0] = this.w;
-        }, 100);
+        setTimeout(
+          (bam = () => {
+            obj.length = 1;
+            obj[0] = this.w;
+          }),
+          bind(this),
+          100
+        );
         return obj;
       }
     });
